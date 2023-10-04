@@ -1,5 +1,6 @@
 import pizzaData from "../mocks/data";
 import PizzaListItem from "./PizzaListItem";
+import React from "react";
 
 function Pizza() {
   const renderedPizzas = pizzaData.map((pizza) => (
@@ -9,11 +10,25 @@ function Pizza() {
       ingredients={pizza.ingredients}
       price={pizza.price}
       url={pizza.photoName}
-      availability={pizza.soldOut}
+      soldOut={pizza.soldOut}
     />
   ));
 
-  return <ul className="pizzas">{renderedPizzas}</ul>;
+  return (
+    <React.Fragment>
+      {pizzaData.length > 0 ? (
+        <>
+          <p>
+            Authentic Italian cuisine. 6 ceative dishes to choose from. All from
+            our stone oven, all organic, all delicious.
+          </p>
+          <ul className="pizzas">{renderedPizzas}</ul>
+        </>
+      ) : (
+        <p>We're still working on our menu. Please come back later :)</p>
+      )}
+    </React.Fragment>
+  );
 }
 
 export default Pizza;

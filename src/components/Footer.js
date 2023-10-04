@@ -7,8 +7,18 @@ function Footer() {
 
   return (
     <footer className="footer">
-    
-      {isOpen ? <p><span>{time}</span> - We are currently open!</p> : <p><span>{time}</span> - Sorry we're closed</p>}
+      <div className="order">
+        {isOpen ? (
+          <p>
+            <span>{time}</span> - We are currently open!
+          </p>
+        ) : (
+          <p>
+            <span>{time}</span> - Sorry we're closed
+          </p>
+        )}
+        {isOpen && <button className="btn">Order</button>}
+      </div>
     </footer>
   );
 }
