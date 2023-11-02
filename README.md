@@ -1,5 +1,5 @@
 # Pizza Menu App
-This simple application creates a pizza menu. It does not persist the data but it does illustrate different aspects of working with Components, Props and JSX. 
+This simple React application creates a pizza menu. It does not persist the data but it does illustrate different aspects of working with Components, Props and JSX. 
 
 ## Screenshot
 ### Store open 
